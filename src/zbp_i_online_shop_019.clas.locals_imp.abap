@@ -13,6 +13,7 @@ CLASS lsc_zbp_i_online_shop_019 IMPLEMENTATION.
       LOOP AT zbp_i_online_shop_019=>cv_pr_mapped-purchaserequisition ASSIGNING FIELD-SYMBOL(<fs_pr_mapped>).
         "CONVERT KEY OF I_PurchaseRequisitionTP FROM <fs_pr_mapped>-%pid TO DATA(ls_pr_key).
         "<fs_pr_mapped>-purchaserequisition = ls_pr_key-purchaserequisition.
+        "<fs_pr_mapped>-purchaserequisition = 200
       ENDLOOP.
     ENDIF.
 
